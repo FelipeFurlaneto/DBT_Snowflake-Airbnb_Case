@@ -1,8 +1,7 @@
-{{ {% snapshot scd_raw_listings %}
+{% snapshot scd_raw_listings %}
 
 {{
    config(
-       target_database='airbnb',
        target_schema='dev',
        unique_key='id',
        strategy='timestamp',
@@ -13,4 +12,4 @@
 
 select * from {{ source('airbnb', 'listings') }}
 
-{% endsnapshot %} }}
+{% endsnapshot %}
