@@ -6,7 +6,7 @@
 
 with src_hosts as
 (
-    select * from AIRBNB.RAW.RAW_HOSTS
+    select * from {{ source('airbnb', 'hosts') }}
 )
 
 select
